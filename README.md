@@ -1,14 +1,18 @@
 ----------------------------------------------
 # VMware Tools Download
 ----------------------------------------------
-```sudo apt-get install open-vm-tools-desktop -y```
+```
+sudo apt-get install open-vm-tools-desktop -y
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # VMware shrink
 ----------------------------------------------
-```sudo vmware-toolbox-cmd disk shrink /```
+```
+sudo vmware-toolbox-cmd disk shrink /
+```
 ----------------------------------------------
 
 
