@@ -1,20 +1,21 @@
 ----------------------------------------------
 # VMware Tools Download
 ----------------------------------------------
-sudo apt-get install open-vm-tools-desktop -y
+```sudo apt-get install open-vm-tools-desktop -y```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # VMware shrink
 ----------------------------------------------
-sudo vmware-toolbox-cmd disk shrink /
+```sudo vmware-toolbox-cmd disk shrink /```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # Easy bashrc
 ----------------------------------------------
+```
 # ////////////////| Easy Bash |///////////////
 alias eb='nano ~/.bashrc'
 alias editb='gedit ~/.bashrc'
@@ -56,31 +57,37 @@ localhostipv4=`ifconfig | grep 192 | awk -F " " '{print $2}'`
 export ROS_MASTER_URI=http://$localhostipv4:11311
 export ROS_HOSTNAME=$localhostipv4
 export TURTLEBOT3_MODEL=burger
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # fast-lio
 ----------------------------------------------
+```
 sudo apt-get install -y libgoogle-glog-dev
 sudo apt-get install -y libeigen3-dev
 sudo apt-get install -y libpcl-dev
 sudo apt-get install -y libyaml-cpp-dev
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # WSL
 ----------------------------------------------
+```
 wsl --install Ubuntu-20.04
 wsl --set-default-version 2
 wsl --update
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # Vscode Configurations
 ----------------------------------------------
+```
 {
     "configurations": [
         {
@@ -100,13 +107,14 @@ wsl --update
     ],
     "version": 4
 }
-
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # Save map
 ----------------------------------------------
+```
 //Shamim //infront
 std::ofstream OpenFile;
 const std::string file_path = "/home/ubuntu/yx_data/yx_slam_data/1_fastlio2_traj.txt";
@@ -124,12 +132,14 @@ const std::string file_path = "/home/ubuntu/yx_data/yx_slam_data/1_fastlio2_traj
         OpenFile.close();
     }
     //
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 # CMakeLists for cpp
 ----------------------------------------------
+```
 #!/bin/bash
 
 # Bold
@@ -165,12 +175,14 @@ echo -e "${UPurple}${BPurple}                          runing a                 
 ./a
 
 echo -e "${UWhite}                           The End                          "
+```
 ----------------------------------------------
 
 
 ----------------------------------------------
 CMakeList.txt
 ----------------------------------------------
+```
 CMakeLists.txt 
 cmake_minimum_required(VERSION 3.16.3)
 project(HelloSLAM)
@@ -182,18 +194,9 @@ add_executable(a hello.cpp)
 
 # add_executable(useHello useHello.cpp)
 # target_link_libraries(useHello hello_shared)
-
+```
 ----------------------------------------------
-
-
 ----------------------------------------------
-# VPN and Others
-----------------------------------------------
-密钥：9C884-RVM9Y-9X3DP-8KYHV-WM226
-enastorm@163.com
-HoloYala1e
-r47@or666.onmicrosoft.com
-密码：Raq91061
 ----------------------------------------------
 
 
