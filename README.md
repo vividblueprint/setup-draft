@@ -1,96 +1,79 @@
-----------------------------------------------
 # VMware Tools Download
-----------------------------------------------
 ```
 sudo apt-get install open-vm-tools-desktop -y
 ```
-----------------------------------------------
-
-
-----------------------------------------------
 # VMware shrink
-----------------------------------------------
 ```
 sudo vmware-toolbox-cmd disk shrink /
 ```
-----------------------------------------------
-
-
-----------------------------------------------
 # Easy bashrc
-----------------------------------------------
 ```
+# ////////////////| Permissions | ////////////
+alias sudochmodxall="sudo chmod +x *"
+alias sudochmodx="sudo chmod +x"
+alias chmodxall="chmod +x *"
+alias chmodx="chmod +x"
+
 # ////////////////| Easy Bash |///////////////
 alias eb='nano ~/.bashrc'
 alias editb='gedit ~/.bashrc'
 alias sb='source ~/.bashrc'
 alias gs='git status'
 alias gp='git pull'
-alias open="xdg-open"
-alias cm="catkin_make"
-alias ds='cd $wsldir'
-alias rs='cd $wsldir/resources'
+alias open='xdg-open'
+alias cm='catkin_make'
+alias vpn='~/Downloads/Clash\ for\ Windows-0.20.39-x64-linux/cfw'
+alias readme='cd /media/shamim/Local\ Disk/VMwares && gedit ./README.md'
 
 # ////////////////| Easy Diractory |//////////
-wsldir="/mnt/d/WSL"
-alias slam='cd $wsldir/lider_slams'
+wsldir="~/catkin_ws"
+alias rs="cd $wsldir/resources "
+alias slam="cd $wsldir/lider_slams"
+alias learning="cd $wsldir/learning"
+alias slambook="cd $wsldir/learning/slambook2"
+alias download="cd ~/Downloads"
 
-alias fastlio2='cd $wsldir/lider_slams/fastlio2/'
-alias fasterlio='cd $wsldir/lider_slams/fasterlio/'
-alias legoloam='cd $wsldir/lider_slams/legoloam/'
-alias liosam='cd $wsldir/lider_slams/liosam/'
-alias cticp='cd $wsldir/lider_slams/cticp/'
-alias pointlio='cd $wsldir/lider_slams/pointlio/'
-alias udataset='cd $wsldir/usharing/usharing_private/'
-alias dataset='cd $wsldir/usharing/'
+# ////////////////| Easy Diractory |//////////
+alias fastlio2="cd $wsldir/lider_slams/fastlio2/"
+alias fasterlio="cd $wsldir/lider_slams/fasterlio/"
+alias legoloam="cd $wsldir/lider_slams/legoloam/"
+alias liosam="cd $wsldir/lider_slams/liosam/"
+alias pointlio="cd $wsldir/lider_slams/pointlio/"
 
-alias spointlio='source /mnt/d/WSL/lider_slams/pointlio/devel/setup.bash'
-alias sfasterlio='source /mnt/d/WSL/lider_slams/fasterlio/devel/setup.bash'
-alias sfastlio2='source /mnt/d/WSL/lider_slams/fastlio2/devel/setup.bash'
-alias sliosam='source /mnt/d/WSL/lider_slams/liosam/devel/setup.bash'
-alias slegoloam='source /mnt/d/WSL/lider_slams/legoloam/devel/setup.bash'
+# ////////////////| Easy Diractory |//////////
+alias udataset="cd /media/shamim/Local\ Disk/WSL/usharing/usharing_private/"
+alias dataset="cd /media/shamim/Local\ Disk/WSL/usharing/"
 
-# ////////////////| ROS DIR |/////////////////
+# ////////////////| Source SLAM |//////////
+alias spointlio="source $wsldir/lider_slams/pointlio/devel/setup.bash"
+alias sfasterlio="source $wsldir/lider_slams/fasterlio/devel/setup.bash"
+alias sfastlio2="source $wsldir/lider_slams/fastlio2/devel/setup.bash"
+alias sliosam="source $wsldir/lider_slams/liosam/devel/setup.bash"
+alias slegoloam="source $wsldir/lider_slams/legoloam/devel/setup.bash"
+
+# ////////////////| Source ROS |/////////////////
 source /opt/ros/noetic/setup.bash
-source /mnt/d/WSL/resources/ws_livox/devel/setup.bash
+source ~/catkin_ws/resources/ws_livox/devel/setup.bash
 
-# ////////////////| The End |/////////////////
+# ////////////////| ROS export |/////////////////
+# export ROS_MASTER_URI=http://10.128.21.70:11311
+# export ROS_HOSTNAME=10.128.21.70
+# alias burger="export TURTLEBOT3_MODEL=burger"
 
-
-localhostipv4=`ifconfig | grep 192 | awk -F " " '{print $2}'`
+localhostipv4=`ifconfig | grep 192.168 | awk -F " " '{print $2}'`
 export ROS_MASTER_URI=http://$localhostipv4:11311
 export ROS_HOSTNAME=$localhostipv4
 export TURTLEBOT3_MODEL=burger
+
+# ////////////////| The End |/////////////////
 ```
-----------------------------------------------
-
-
-----------------------------------------------
-# fast-lio
-----------------------------------------------
-```
-sudo apt-get install -y libgoogle-glog-dev
-sudo apt-get install -y libeigen3-dev
-sudo apt-get install -y libpcl-dev
-sudo apt-get install -y libyaml-cpp-dev
-```
-----------------------------------------------
-
-
-----------------------------------------------
 # WSL
-----------------------------------------------
 ```
 wsl --install Ubuntu-20.04
 wsl --set-default-version 2
 wsl --update
 ```
-----------------------------------------------
-
-
-----------------------------------------------
 # Vscode Configurations
-----------------------------------------------
 ```
 {
     "configurations": [
@@ -112,12 +95,7 @@ wsl --update
     "version": 4
 }
 ```
-----------------------------------------------
-
-
-----------------------------------------------
 # Save map
-----------------------------------------------
 ```
 //Shamim //infront
 std::ofstream OpenFile;
@@ -137,53 +115,7 @@ const std::string file_path = "/home/ubuntu/yx_data/yx_slam_data/1_fastlio2_traj
     }
     //
 ```
-----------------------------------------------
 
-
-----------------------------------------------
-# CMakeLists for cpp
-----------------------------------------------
-```
-#!/bin/bash
-
-# Bold
-BBlack='\033[1;30m'       # Black
-BRed='\033[1;31m'         # Red
-BGreen='\033[1;32m'       # Green
-BYellow='\033[1;33m'      # Yellow
-BBlue='\033[1;34m'        # Blue
-BPurple='\033[1;35m'      # Purple
-BCyan='\033[1;36m'        # Cyan
-BWhite='\033[1;37m'       # White
-
-# Underline
-UBlack='\033[4;30m'       # Black
-URed='\033[4;31m'         # Red
-UGreen='\033[4;32m'       # Green
-UYellow='\033[4;33m'      # Yellow
-UBlue='\033[4;34m'        # Blue
-UPurple='\033[4;35m'      # Purple
-UCyan='\033[4;36m'        # Cyan
-UWhite='\033[4;37m'       # White
-NC='\033[0m' # No Color
-
-echo -e "${UCyan}${BCyan}          ${NC}${BCyan}Today is :" `date`"${UCyan}           "
-
-echo -e "${UPurple}${BPurple}                          building                          ${NC}"
-cmake -B build
-
-echo -e "${UPurple}${BPurple}                            make                            ${NC}"
-cd ./build/ && make -j16
-
-echo -e "${UPurple}${BPurple}                          runing a                          ${NC}${BYellow}"
-./a
-
-echo -e "${UWhite}                           The End                          "
-```
-----------------------------------------------
-
-
-----------------------------------------------
 CMakeList.txt
 ----------------------------------------------
 ```
@@ -236,17 +168,5 @@ echo -e "${UPurple}${BPurple}                          runing a                 
 
 echo -e "${UWhite}                           The End                          "
 ```
-----------------------------------------------
 
-
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-
-
-----------------------------------------------
-----------------------------------------------
-----------------------------------------------
-
-
---------------------The End-------------------
+-------------------- The End -------------------
