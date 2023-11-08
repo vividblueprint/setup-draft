@@ -187,7 +187,6 @@ echo -e "${UWhite}                           The End                          "
 CMakeList.txt
 ----------------------------------------------
 ```
-CMakeLists.txt 
 cmake_minimum_required(VERSION 3.16.3)
 project(HelloSLAM)
 set(CMAKE_BUILD_TYPE "Debug")
@@ -195,12 +194,48 @@ add_executable(a hello.cpp)
 
 # add_library(hello libHelloSLAM.cpp)
 # add_library(hello_shared SHARED libHelloSLAM.cpp)
-
-# add_executable(useHello useHello.cpp)
 # target_link_libraries(useHello hello_shared)
 ```
 ----------------------------------------------
+# c++ compile.bash 
 ----------------------------------------------
+```
+#!/bin/bash
+
+# Bold
+BBlack='\033[1;30m'       # Black
+BRed='\033[1;31m'         # Red
+BGreen='\033[1;32m'       # Green
+BYellow='\033[1;33m'      # Yellow
+BBlue='\033[1;34m'        # Blue
+BPurple='\033[1;35m'      # Purple
+BCyan='\033[1;36m'        # Cyan
+BWhite='\033[1;37m'       # White
+
+# Underline
+UBlack='\033[4;30m'       # Black
+URed='\033[4;31m'         # Red
+UGreen='\033[4;32m'       # Green
+UYellow='\033[4;33m'      # Yellow
+UBlue='\033[4;34m'        # Blue
+UPurple='\033[4;35m'      # Purple
+UCyan='\033[4;36m'        # Cyan
+UWhite='\033[4;37m'       # White
+NC='\033[0m' # No Color
+
+echo -e "${UCyan}${BCyan}          ${NC}${BCyan}Today is :" `date`"${UCyan}           "
+
+echo -e "${UPurple}${BPurple}                          building                          ${NC}"
+cmake -B build
+
+echo -e "${UPurple}${BPurple}                            make                            ${NC}"
+cd ./build/ && make -j16
+
+echo -e "${UPurple}${BPurple}                          runing a                          ${NC}${BYellow}"
+./a
+
+echo -e "${UWhite}                           The End                          "
+```
 ----------------------------------------------
 
 
