@@ -116,7 +116,7 @@ const std::string file_path = "/home/ubuntu/yx_data/yx_slam_data/1_fastlio2_traj
     //
 ```
 
-CMakeList.txt
+# CMakeList.txt
 ```
 cmake_minimum_required(VERSION 3.16.3)
 project(HelloSLAM)
