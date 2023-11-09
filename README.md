@@ -165,7 +165,15 @@ echo -e "${UPurple}${BPurple}                          runing a                 
 
 echo -e "${UWhite}                           The End                          "
 ```
-
-
-
+# linux solution
+- ### Minimize window click-action
+```
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action "minimize"
+```
+- ### scan device from the same network
+```
+sudo apt-get install nmap
+ip route | grep default
+nmap -sn xx.xx.xx.xx/24
+```
 ---------------------------------------
