@@ -25,7 +25,7 @@ alias cm='catkin_make'
 alias vpn='~/Downloads/Clash\ for\ Windows-0.20.39-x64-linux/cfw'
 alias readme='cd /media/shamim/Local\ Disk/VMwares && gedit ./README.md'
 
-# ////////////////| Easy Diractory |//////////
+# ////////////////| Easy Directory |//////////
 wsldir="~/catkin_ws"
 alias rs="cd $wsldir/resources "
 alias slam="cd $wsldir/lider_slams"
@@ -33,14 +33,14 @@ alias learning="cd $wsldir/learning"
 alias slambook="cd $wsldir/learning/slambook2"
 alias download="cd ~/Downloads"
 
-# ////////////////| Easy Diractory |//////////
+# ////////////////| Easy Directory |//////////
 alias fastlio2="cd $wsldir/lider_slams/fastlio2/"
 alias fasterlio="cd $wsldir/lider_slams/fasterlio/"
 alias legoloam="cd $wsldir/lider_slams/legoloam/"
 alias liosam="cd $wsldir/lider_slams/liosam/"
 alias pointlio="cd $wsldir/lider_slams/pointlio/"
 
-# ////////////////| Easy Diractory |//////////
+# ////////////////| Easy Directory |//////////
 alias udataset="cd /media/shamim/Local\ Disk/WSL/usharing/usharing_private/"
 alias dataset="cd /media/shamim/Local\ Disk/WSL/usharing/"
 
@@ -175,5 +175,33 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action "minimize"
 sudo apt-get install nmap
 ip route | grep default
 nmap -sn xx.xx.xx.xx/24
+```
+# Remove Ubuntu from your system
+1. delete the drive where Ubuntu installed
+2. Log in to Windows 10/11 and insert these commands to the terminal:
+```
+ list disk
+ 
+ select disk 0
+
+ list partition
+
+ select partition 1 # System
+
+ assign letter=z
+
+ exit
+
+ z:
+
+ dir
+
+ cd efi
+
+ dir
+
+ rd ubuntu /s # remove ubuntu
+ 
+ dir
 ```
 ---------------------------------------
