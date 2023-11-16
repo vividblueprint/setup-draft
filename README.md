@@ -176,8 +176,8 @@ sudo apt-get install nmap
 ip route | grep default
 nmap -sn xx.xx.xx.xx/24
 ```
-# Remove Ubuntu from your system
-1. delete the drive where Ubuntu installed
+# Remove Ubuntu from your dual boot system
+1. Delete the drive where Ubuntu installed.
 2. Log in to Windows 10/11 and insert these commands to the terminal:
 ```
  list disk
