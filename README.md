@@ -204,4 +204,8 @@ nmap -sn xx.xx.xx.xx/24
  
  dir
 ```
+# rosdep init update
+```
+151.101.84.133 raw.githubusercontent.com
+```
 ---------------------------------------
