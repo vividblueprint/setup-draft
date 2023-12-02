@@ -206,6 +206,7 @@ nmap -sn xx.xx.xx.xx/24
 ```
 # rosdep init update
 ```
+sudo gedit /etc/hosts
 151.101.84.133 raw.githubusercontent.com
 ```
 ---------------------------------------
