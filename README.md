@@ -180,6 +180,7 @@ nmap -sn xx.xx.xx.xx/24
 1. Delete the drive where Ubuntu installed.
 2. Log in to Windows 10/11 and insert these commands to the terminal:
 ```
+ diskpart
  list disk
  
  select disk 0
